@@ -275,6 +275,18 @@ figcaption{font-size:13px;color:var(--muted)}
   .form .row2{grid-template-columns:1fr}
   .contact{padding:22px}
 }
+
+.sec.eff{grid-template-columns:repeat(4,minmax(0,1fr))}
+.si.we{background:var(--teal-soft,#E3F1F0);border-color:transparent}
+.faq{display:flex;flex-direction:column;gap:10px;margin-top:24px;max-width:860px}
+.qa{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:0 18px}
+.qa summary{cursor:pointer;list-style:none;padding:16px 28px 16px 0;font-weight:600;font-size:16px;position:relative}
+.qa summary::-webkit-details-marker{display:none}
+.qa summary::after{content:"+";position:absolute;right:0;top:12px;font-size:22px;font-weight:400;color:var(--muted);transition:transform .25s ease}
+.qa[open] summary::after{transform:rotate(45deg)}
+.qa p{margin:0 0 16px;color:var(--muted);font-size:15px;line-height:1.55}
+@media (max-width:900px){.sec.eff{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:640px){.sec.eff{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -287,6 +299,7 @@ figcaption{font-size:13px;color:var(--muted)}
       <a href="#modules"><span class="ru">Модули</span><span class="kz">Модульдер</span></a>
       <a href="#method"><span class="ru">Методология</span><span class="kz">Әдістеме</span></a>
       <a href="#security"><span class="ru">Безопасность</span><span class="kz">Қауіпсіздік</span></a>
+      <a href="#faq"><span class="ru">Вопросы</span><span class="kz">Сұрақтар</span></a>
       <a href="#contact"><span class="ru">Контакты</span><span class="kz">Байланыс</span></a>
     </nav>
     <div class="lang" role="group" aria-label="Язык / Тіл">
@@ -301,7 +314,7 @@ figcaption{font-size:13px;color:var(--muted)}
     <div>
       <p class="eyebrow"><span class="ru">Кадры и оплата труда в 1С:ЗУП — под контролем</span><span class="kz">1С:ЗУП-тағы кадрлар мен еңбекақыны бақылау</span></p>
       <h1 style="margin-top:14px"><span class="ru"><span class="sr">Порядок в кадрах и начислениях — без привязки к людям</span><span aria-hidden="true"><span class="l1">Порядок в <span class="rot" aria-hidden="true"><span class="on">кадрах</span><span>документах</span><span>табеле</span><span>зарплатах</span><span>начислениях</span></span></span><br><em>без привязки к людям</em></span></span><span class="kz"><span class="sr">Кадрлар мен есептеулердегі тәртіп — адамдарға тәуелсіз</span><span aria-hidden="true"><span class="l1"><span class="rot" aria-hidden="true"><span class="on">Кадрлардағы</span><span>Құжаттардағы</span><span>Табельдегі</span><span>Жалақыдағы</span><span>Есептеулердегі</span></span> тәртіп</span><br><em>адамдарға тәуелсіз</em></span></span></h1>
-      <p class="lead"><span class="ru">Кадровые ошибки и непрозрачные премии обходятся бизнесу дорого.</span><span class="kz">Кадрлық қателер мен ашық емес сыйақылар бизнеске қымбатқа түседі.</span></p>
+      <p class="lead"><span class="ru">Кадровые ошибки и непрозрачная система оплаты и мотивации обходятся бизнесу дорого.</span><span class="kz">Кадрлық қателер мен ашық емес еңбекақы және ынталандыру жүйесі бизнеске қымбатқа түседі.</span></p>
       <p class="lead" style="font-size:16px;margin-top:10px"><span class="ru">Tártip HR формирует кадровые документы на казахском и русском языках на основе данных 1С:ЗУП и проверяет их до подписания. Модуль C&amp;B-Контроль помогает создать расчёт KPI, премий и бюджета ФОТ по утверждённым правилам.</span><span class="kz">Tártip HR 1С:ЗУП деректері негізінде қазақ және орыс тілдерінде кадрлық құжаттарды қалыптастырады және оларды қол қойылғанға дейін тексереді. C&amp;B-Контроль модулі бекітілген ережелер бойынша KPI, сыйақы және ЕТҚ бюджетінің есебін жасауға көмектеседі.</span></p>
       <p class="lead" style="font-size:16px;margin-top:10px;color:var(--fg);font-weight:600"><span class="ru">Вы видите ошибки в документах и отклонения в начислениях до того, как они становятся проблемой.</span><span class="kz">Құжаттардағы қателер мен есептеулердегі ауытқуларды олар проблемаға айналмай тұрып көресіз.</span></p>
       <p class="word"><b>Tártip</b><span class="ru">— по-казахски «порядок»</span><span class="kz">— «тәртіп» деген сөз</span></p>
@@ -412,6 +425,21 @@ figcaption{font-size:13px;color:var(--muted)}
     </div>
   </section>
 
+  <section id="effort">
+    <div class="wrap">
+      <p class="eyebrow"><span class="ru">Внедрение</span><span class="kz">Енгізу</span></p>
+      <h2 style="margin-top:8px"><span class="ru">Что внедрение потребует от вас</span><span class="kz">Енгізу сізден не талап етеді</span></h2>
+      <p class="lead" style="margin-top:10px;max-width:760px"><span class="ru">Внедрение не должно стать отдельным проектом для вашего HR-отдела. Основную работу берём на себя.</span><span class="kz">Енгізу HR-бөліміңіз үшін жеке жобаға айналмауы керек. Негізгі жұмысты өзімізге аламыз.</span></p>
+      <div class="sec eff">
+        <div class="si"><b><span class="ru">HR и кадровики</span><span class="kz">HR және кадр мамандары</span></b><p><span class="ru">Шаблоны ваших документов и 2–3 часа в неделю на время подключения</span><span class="kz">Құжаттарыңыздың үлгілері және қосу кезеңінде аптасына 2–3 сағат</span></p></div>
+        <div class="si"><b><span class="ru">IT</span><span class="kz">IT</span></b><p><span class="ru">Доступ к копии базы и установка расширения. Типовая конфигурация 1С не меняется</span><span class="kz">Базаның көшірмесіне қолжетімділік және кеңейтуді орнату. 1С типтік конфигурациясы өзгермейді</span></p></div>
+        <div class="si"><b><span class="ru">Руководители</span><span class="kz">Басшылар</span></b><p><span class="ru">10–15 минут в месяц: подтвердить результаты своего отдела</span><span class="kz">Айына 10–15 минут: өз бөлімінің нәтижелерін растау</span></p></div>
+        <div class="si we"><b><span class="ru">Мы</span><span class="kz">Біз</span></b><p><span class="ru">Анализ, настройка 1С, формулы, роли и обучение. Ваш 1С-программист не нужен</span><span class="kz">Талдау, 1С баптау, формулалар, рөлдер және оқыту. Сіздің 1С бағдарламашыңыз қажет емес</span></p></div>
+      </div>
+      <p class="small" style="margin-top:14px"><span class="ru">Внедряет практик: 19 лет в HR и C&amp;B, настройка 1С:ЗУП. Не нужно объяснять, что такое допсоглашение или Положение о премировании.</span><span class="kz">Енгізуді практик жүргізеді: HR және C&amp;B саласында 19 жыл, 1С:ЗУП баптау. Қосымша келісім немесе сыйақы туралы Ереже не екенін түсіндірудің қажеті жоқ.</span></p>
+    </div>
+  </section>
+
   <section class="band" id="method">
     <div class="wrap">
       <p class="eyebrow"><span class="ru">Методология</span><span class="kz">Әдістеме</span></p>
@@ -434,7 +462,7 @@ figcaption{font-size:13px;color:var(--muted)}
         <div class="si"><b><span class="ru">Где ваши данные</span><span class="kz">Деректеріңіз қайда</span></b><p><span class="ru">КДП-Контроль подключается к вашей 1С:ЗУП через согласованный механизм интеграции. Размещение C&amp;B-модуля и условия доступа, хранения и обработки данных согласуются до начала внедрения. Для первой демонстрации используем обезличенные или тестовые данные — не отправляйте ИИН и реальные кадровые документы через форму сайта.</span><span class="kz">КДП-Контроль келісілген интеграция механизмі арқылы сіздің 1С:ЗУП жүйеңізге қосылады. C&amp;B модулін орналастыру, деректерге қол жеткізу, сақтау және өңдеу шарттары енгізу басталғанға дейін келісіледі. Алғашқы көрсетілімде иесіздендірілген немесе тестілік деректер қолданылады — сайт нысаны арқылы ЖСН мен нақты кадрлық құжаттарды жібермеңіз.</span></p></div>
         <div class="si"><b><span class="ru">Что меняется в 1С</span><span class="kz">1С-те не өзгереді</span></b><p><span class="ru">Подключаем расширение — типовая конфигурация не меняется, обновления 1С ставятся как обычно. После обновления проверяем работу.</span><span class="kz">Кеңейтуді қосамыз — типтік конфигурация өзгермейді, 1С жаңартулары әдеттегідей орнатылады. Жаңартудан кейін жұмысын тексереміз.</span></p></div>
         <div class="si"><b><span class="ru">Тестирование</span><span class="kz">Тестілеу</span></b><p><span class="ru">Сначала на копии вашей базы, потом в рабочей. Доступ для настройки — только на время подключения и по вашему согласованию.</span><span class="kz">Алдымен базаңыздың көшірмесінде, содан кейін жұмыс базасында. Баптауға қол жеткізу — тек қосу кезеңінде және сіздің келісіміңізбен.</span></p></div>
-        <div class="si"><b><span class="ru">Что нужно от вас</span><span class="kz">Сізден не керек</span></b><p><span class="ru">Шаблоны ваших документов и ответственный кадровик на 2–3 часа в неделю на время подключения.</span><span class="kz">Құжаттарыңыздың үлгілері және қосу кезеңінде аптасына 2–3 сағатқа жауапты кадр маманы.</span></p></div>
+        <div class="si"><b><span class="ru">Измеримый результат</span><span class="kz">Өлшенетін нәтиже</span></b><p><span class="ru">На первой неделе фиксируем исходные цифры: время на документы, возвраты на исправление, срок закрытия премий. Через 1–2 месяца — отчёт «было → стало».</span><span class="kz">Бірінші аптада бастапқы көрсеткіштерді тіркейміз: құжаттарға кететін уақыт, түзетуге қайтарулар, сыйақыны жабу мерзімі. 1–2 айдан кейін — «бұрын → кейін» есебі.</span></p></div>
         <div class="si"><b><span class="ru">Поддержка</span><span class="kz">Қолдау</span></b><p><span class="ru">Ответ в WhatsApp в рабочие дни. Исправление ошибок и настройка под изменения закона — в рамках подписки.</span><span class="kz">Жұмыс күндері WhatsApp-та жауап. Қателерді түзету және заң өзгерістеріне баптау — жазылым аясында.</span></p></div>
         <div class="si"><b><span class="ru">Документы</span><span class="kz">Құжаттар</span></b><p><span class="ru">До начала внедрения согласуются договор, роли сторон, цели и основания обработки данных, меры защиты, сроки хранения и порядок удаления. NDA оформляется дополнительно и не заменяет требования законодательства о персональных данных.</span><span class="kz">Енгізу басталғанға дейін шарт, тараптардың рөлдері, деректерді өңдеу мақсаттары мен негіздері, қорғау шаралары, сақтау мерзімдері және жою тәртібі келісіледі. NDA қосымша рәсімделеді және дербес деректер туралы заңнама талаптарын алмастырмайды.</span></p></div>
       </div>
@@ -454,6 +482,21 @@ figcaption{font-size:13px;color:var(--muted)}
             <span>Weatherford Kazakhstan · HRMS</span><span><span class="ru">19 лет в HR</span><span class="kz">HR-да 19 жыл</span></span><span><span class="ru">оплата труда и C&amp;B</span><span class="kz">еңбекақы және C&amp;B</span></span><span><span class="ru">КДП на вахте</span><span class="kz">вахтадағы КІЖ</span></span><span>1С:ЗУП · ЕСУТД</span><span><span class="ru">автоматизация 1С и ИИ</span><span class="kz">1С және ЖИ автоматтандыру</span></span>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="wrap">
+      <p class="eyebrow"><span class="ru">Вопросы и ответы</span><span class="kz">Сұрақтар мен жауаптар</span></p>
+      <h2 style="margin-top:8px"><span class="ru">Частые опасения</span><span class="kz">Жиі кездесетін алаңдаушылықтар</span></h2>
+      <div class="faq">
+        <details class="qa"><summary><span class="ru">Кадровикам придётся переучиваться?</span><span class="kz">Кадр мамандарына қайта оқу керек пе?</span></summary><p><span class="ru">Нет. Они работают в той же 1С:ЗУП — добавляется формирование комплекта документов и проверка до подписи. Обычно хватает одного показа на реальных документах.</span><span class="kz">Жоқ. Олар сол 1С:ЗУП-та жұмыс істейді — құжаттар жиынтығын қалыптастыру және қол қойғанға дейін тексеру қосылады. Әдетте нақты құжаттармен бір рет көрсету жеткілікті.</span></p></details>
+        <details class="qa"><summary><span class="ru">Система будет «ловить» ошибки кадровика?</span><span class="kz">Жүйе кадр маманының қателерін «ұстай» ма?</span></summary><p><span class="ru">Она ловит их до подписи — раньше, чем их увидит директор или проверка. Это страховка для кадровика, а не контроль над ним.</span><span class="kz">Ол қателерді қол қойғанға дейін — директор немесе тексеру көргенге дейін ұстайды. Бұл кадр маманын бақылау емес, оны сақтандыру.</span></p></details>
+        <details class="qa"><summary><span class="ru">Руководители не будут каждый месяц оценивать сотрудников</span><span class="kz">Басшылар қызметкерлерді ай сайын бағаламайды</span></summary><p><span class="ru">Сотрудник сам отмечает выполнение в телефоне, руководитель только подтверждает — 10–15 минут в месяц на отдел. HR видит, кто ещё не подтвердил.</span><span class="kz">Қызметкер орындалуды телефонда өзі белгілейді, басшы тек растайды — бөлімге айына 10–15 минут. HR кімнің әлі растамағанын көреді.</span></p></details>
+        <details class="qa"><summary><span class="ru">А если руководитель всем поставит 100%?</span><span class="kz">Ал басшы бәріне 100% қойса ше?</span></summary><p><span class="ru">Система подсвечивает «всем 100%» и выход за бюджет ФОТ. Результат подтверждается на трёх уровнях: сотрудник, руководитель, HR.</span><span class="kz">Жүйе «бәріне 100%» және ЕТҚ бюджетінен асуды белгілейді. Нәтиже үш деңгейде расталады: қызметкер, басшы, HR.</span></p></details>
+        <details class="qa"><summary><span class="ru">Придётся менять нашу систему премирования?</span><span class="kz">Сыйақы жүйемізді өзгерту керек пе?</span></summary><p><span class="ru">Нет. Начинаем с ваших действующих правил и Положения. Меняем только то, что вы сами согласуете.</span><span class="kz">Жоқ. Қолданыстағы ережелеріңіз бен Ережеңізден бастаймыз. Тек өзіңіз келіскен нәрсені ғана өзгертеміз.</span></p></details>
+        <details class="qa"><summary><span class="ru">У нас в 1С беспорядок: дубли, старые должности</span><span class="kz">Біздің 1С-те тәртіп жоқ: қайталанулар, ескі лауазымдар</span></summary><p><span class="ru">Это нормально. Первая неделя внедрения — анализ данных: покажем, что поправить до запуска, и поможем это сделать.</span><span class="kz">Бұл қалыпты жағдай. Енгізудің бірінші аптасы — деректерді талдау: іске қосуға дейін нені түзету керегін көрсетіп, соны жасауға көмектесеміз.</span></p></details>
       </div>
     </div>
   </section>
