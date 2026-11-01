@@ -86,7 +86,7 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .dc{border:1px solid var(--line);border-radius:12px;padding:14px;display:flex;flex-direction:column;gap:6px;font-size:13px;background:var(--surface)}
 .dc .h{font-size:11px;font-weight:700;letter-spacing:.06em;color:var(--teal)}
 .dc b{font-size:14px}
-.dc span.l{color:var(--muted)}
+.dc span.l{color:var(--muted);font-size:12px}.dc .m{color:var(--muted);font-size:12px;margin-top:-4px}.dc .pr{font-weight:700;font-size:12px}.dc .tx{font-size:13px}
 .dc .ok{margin-top:8px;font-weight:700;color:var(--teal)}
 .flow{display:flex;align-items:center;gap:8px;flex-wrap:wrap;padding:16px 20px 0;font-size:13px;font-weight:600}
 .flow span.c{border:1px solid var(--line);border-radius:999px;padding:6px 12px;background:var(--surface)}
@@ -326,8 +326,8 @@ figcaption{font-size:13px;color:var(--muted)}
     <div class="alert" aria-label="Пример: приказ на двух языках из данных 1С">
       <div class="flow"><span class="c"><span class="ru">Служебная записка</span><span class="kz">Қызметтік жазба</span></span><span class="a">→</span><span class="c"><span class="ru">Данные в 1С:ЗУП</span><span class="kz">1С:ЗУП-тағы деректер</span></span><span style="flex-basis:100%;color:var(--teal)">↓ <span class="ru">один ввод — два языка</span><span class="kz">бір енгізу — екі тіл</span></span></div>
       <div class="docs2">
-        <div class="dc"><span class="h">ПРИКАЗ № 47-К</span><b>О приёме на работу</b><span class="l">ФИО: Ахметов Бауыржан</span><span class="l">Должность: оператор линии</span><span class="l">Оклад: 197 000 ₸</span><span class="ok">✓ <span class="ru">проверено до подписи</span><span class="kz">қол қойғанға дейін тексерілді</span></span></div>
-        <div class="dc"><span class="h">БҰЙРЫҚ № 47-К</span><b>Жұмысқа қабылдау туралы</b><span class="l">Аты-жөні: Ахметов Бауыржан</span><span class="l">Лауазымы: желі операторы</span><span class="l">Жалақы: 197 000 ₸</span><span class="ok">✓ <span class="ru">проверено до подписи</span><span class="kz">қол қойғанға дейін тексерілді</span></span></div>
+        <div class="dc"><span class="h">ПРИКАЗ № 47-К</span><span class="m">12.11.2026 · г. Астана</span><b>О приёме на работу</b><span class="pr">ПРИКАЗЫВАЮ:</span><span class="tx">1. Принять Ахметова Бауыржана на должность оператора линии с 13.11.2026.</span><span class="l">Основание: трудовой договор № 31 от 12.11.2026, заявление от 10.11.2026.</span><span class="ok">✓ <span class="ru">проверено до подписи</span><span class="kz">қол қойғанға дейін тексерілді</span></span></div>
+        <div class="dc"><span class="h">БҰЙРЫҚ № 47-К</span><span class="m">12.11.2026 · Астана қ.</span><b>Жұмысқа қабылдау туралы</b><span class="pr">БҰЙЫРАМЫН:</span><span class="tx">1. Ахметов Бауыржан 13.11.2026 бастап желі операторы лауазымына жұмысқа қабылдансын.</span><span class="l">Негіздеме: 12.11.2026 № 31 еңбек шарты, 10.11.2026 өтініш.</span><span class="ok">✓ <span class="ru">проверено до подписи</span><span class="kz">қол қойғанға дейін тексерілді</span></span></div>
       </div>
       <div class="alert-foot"><span class="ru">Пример · трудовой договор, допсоглашение и приказы — тем же способом</span><span class="kz">Мысал · еңбек шарты, қосымша келісім және бұйрықтар — дәл осылай</span></div>
     </div>
