@@ -427,6 +427,27 @@ figcaption{font-size:13px;color:var(--muted)}
 @media (max-width:960px){.arts{grid-template-columns:repeat(2,minmax(0,1fr))}.calc{grid-template-columns:1fr}}
 @media (max-width:600px){.arts{grid-template-columns:1fr}.crw{grid-template-columns:minmax(0,1fr) 44px;}.crw input[type=range]{grid-column:1/2}.crw output{grid-column:2/3}.gr{grid-template-columns:1fr 1fr;}.gr span:nth-child(2){display:none}}
 .cex{margin-top:12px;font-style:italic}.demo{text-align:center;margin-top:14px;font-style:italic}
+/* v5 offer */
+.offer-sec{border-top:0;padding-block:8px 24px}
+.offer{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap;background:var(--blue);color:#fff;border-radius:20px;padding:26px 28px}
+.offer h2{color:#fff;margin:8px 0 8px}
+.offer p{max-width:62ch;opacity:.95}
+.offer .small{color:#fff;opacity:.8;margin-top:6px}
+.otag{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;background:rgba(255,255,255,.18);border-radius:999px;padding:4px 10px}
+.offer .btn.big{display:inline-flex!important;align-items:center;justify-content:center;flex:none;background:#fff;color:var(--blue)!important;min-height:54px;padding:0 26px;font-size:16px}
+:root[data-theme="dark"] .offer{background:#1E4FB8}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .offer{background:#1E4FB8}}
+.five{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px;margin-top:24px}
+.fv{background:var(--surface);border:1px solid var(--line);border-top:4px solid var(--blue);border-radius:14px;padding:16px;display:flex;flex-direction:column;gap:6px}
+.fv .n{font-family:var(--display);font-size:22px;color:var(--blue)}
+.fv p{font-size:14px;color:var(--muted)}
+.pf{margin-top:20px;max-width:520px;background:var(--surface);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.pfh{display:flex;justify-content:space-between;align-items:baseline;padding:12px 16px;font-weight:700;border-bottom:1px solid var(--line)}
+.pfr{display:grid;grid-template-columns:1.4fr 1fr 1fr 30px;gap:8px;padding:9px 16px;border-top:1px solid var(--line);font-size:15px;align-items:center}
+.pfr.hd{border-top:0;font-size:13px;color:var(--muted);font-weight:600}
+.dot{width:14px;height:14px;border-radius:50%}.dot.g{background:#3BAA6E}.dot.r{background:#E06464}
+@media (max-width:960px){.five{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:600px){.five{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -457,6 +478,13 @@ figcaption{font-size:13px;color:var(--muted)}
     </div>
     <div class="choose" role="group" aria-label="Выбор модуля">
       <p class="q"><span class="ru">Что вам сейчас важнее?</span><span class="kz">Сізге қазір не маңызды?</span></p>
+      <button type="button" class="opt cb" data-track="cb" aria-pressed="false">
+        <span class="tag"><span class="ru">Грейды, оклады и KPI</span><span class="kz">Грейдтер, жалақы және KPI</span></span>
+        <span class="nm">C&amp;B-Контроль</span>
+        <span class="tx"><span class="ru">Конструктор грейдов и окладов, KPI-карты из должностных инструкций, расчёт переменной части и контроль ФОТ.</span><span class="kz">Грейдтер мен жалақы конструкторы, лауазымдық нұсқаулықтан KPI-карталар, өзгермелі бөлікті есептеу және ЕТҚ бақылауы.</span></span>
+        <span class="mt"><span class="ru">3 KPI-карты для ваших должностей — бесплатно</span><span class="kz">Сіздің лауазымдарыңызға 3 KPI-карта — тегін</span></span>
+        <span class="go"><span class="ru">Смотреть C&amp;B-Контроль ↓</span><span class="kz">C&amp;B-Контрольді көру ↓</span></span>
+      </button>
       <button type="button" class="opt kdp" data-track="kdp" aria-pressed="false">
         <span class="tag"><span class="ru">Кадровые документы</span><span class="kz">Кадрлық құжаттар</span></span>
         <span class="nm">КДП-Контроль</span>
@@ -464,13 +492,7 @@ figcaption{font-size:13px;color:var(--muted)}
         <span class="mt"><span class="ru">Демо — онлайн за 20 минут</span><span class="kz">Демо — онлайн 20 минут</span></span>
         <span class="go"><span class="ru">Смотреть КДП-Контроль ↓</span><span class="kz">КДП-Контрольді көру ↓</span></span>
       </button>
-      <button type="button" class="opt cb" data-track="cb" aria-pressed="false">
-        <span class="tag"><span class="ru">Грейды, оклады и KPI</span><span class="kz">Грейдтер, жалақы және KPI</span></span>
-        <span class="nm">C&amp;B-Контроль</span>
-        <span class="tx"><span class="ru">Конструктор грейдов и окладов, KPI-карты из должностных инструкций, расчёт переменной части и контроль ФОТ.</span><span class="kz">Грейдтер мен жалақы конструкторы, лауазымдық нұсқаулықтан KPI-карталар, өзгермелі бөлікті есептеу және ЕТҚ бақылауы.</span></span>
-        <span class="mt"><span class="ru">Покажем на ваших должностях за 20 минут</span><span class="kz">Сіздің лауазымдарыңызда 20 минутта көрсетеміз</span></span>
-        <span class="go"><span class="ru">Смотреть C&amp;B-Контроль ↓</span><span class="kz">C&amp;B-Контрольді көру ↓</span></span>
-      </button>
+      
       <p class="note"><span class="ru">Модули работают каждый сам по себе. Если нужны оба — подключим по очереди.</span><span class="kz">Модульдер бір-бірінен тәуелсіз жұмыс істейді. Екеуі де керек болса — кезекпен қосамыз.</span></p>
     </div>
   </div>
@@ -603,6 +625,41 @@ figcaption{font-size:13px;color:var(--muted)}
       </div>
     </div>
   </section>
+  <section class="offer-sec">
+    <div class="wrap">
+      <div class="offer">
+        <div>
+          <span class="otag"><span class="ru">Бесплатно · без обязательств</span><span class="kz">Тегін · міндеттемесіз</span></span>
+          <h2><span class="ru">3 KPI-карты для ваших должностей</span><span class="kz">Сіздің лауазымдарыңызға 3 KPI-карта</span></h2>
+          <p><span class="ru">Пришлите 3 должностные инструкции — за 2 рабочих дня вернём готовые KPI-карты: 3–5 показателей, веса, порог и откуда брать данные.</span><span class="kz">3 лауазымдық нұсқаулықты жіберіңіз — 2 жұмыс күні ішінде дайын KPI-карталарды қайтарамыз: 3–5 көрсеткіш, салмақтар, шек және деректерді қайдан алу керегі.</span></p>
+          <p class="small"><span class="ru">Только должностные инструкции — без ФИО и окладов.</span><span class="kz">Тек лауазымдық нұсқаулықтар — аты-жөнсіз және жалақысыз.</span></p>
+        </div>
+        <a class="btn btn-blue big" href="#contact"><span class="ru">Получить 3 KPI-карты</span><span class="kz">3 KPI-карта алу</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <p class="eyebrow"><span class="ru">Как мы выстраиваем систему</span><span class="kz">Жүйені қалай құрамыз</span></p>
+      <h2 style="margin-top:8px"><span class="ru">5 шагов — от Excel к работающей системе KPI</span><span class="kz">5 қадам — Excel-ден жұмыс істейтін KPI жүйесіне дейін</span></h2>
+      <div class="five">
+        <div class="fv"><span class="n">1</span><b><span class="ru">Диагностика</span><span class="kz">Диагностика</span></b><p><span class="ru">Структура, должности, действующее Положение и как сейчас считают переменную часть</span><span class="kz">Құрылым, лауазымдар, қолданыстағы Ереже және өзгермелі бөлік қазір қалай есептеледі</span></p></div>
+        <div class="fv"><span class="n">2</span><b><span class="ru">Грейды и KPI-карты</span><span class="kz">Грейдтер мен KPI-карталар</span></b><p><span class="ru">Оценка должностей, вилки окладов, 3–5 KPI с весами и источниками данных</span><span class="kz">Лауазымдарды бағалау, жалақы ауқымдары, салмақтары мен дерек көздері бар 3–5 KPI</span></p></div>
+        <div class="fv"><span class="n">3</span><b><span class="ru">Ежемесячный цикл</span><span class="kz">Ай сайынғы цикл</span></b><p><span class="ru">Сотрудник отмечает → руководитель подтверждает → HR сверяет с ФОТ → приказ в 1С:ЗУП</span><span class="kz">Қызметкер белгілейді → басшы растайды → HR ЕТҚ-мен салыстырады → бұйрық 1С:ЗУП-қа</span></p></div>
+        <div class="fv"><span class="n">4</span><b><span class="ru">Анализ план / факт</span><span class="kz">Жоспар / факт талдауы</span></b><p><span class="ru">Выполнение KPI по отделам, ФОТ план и факт, сигналы «всем 100%» и выход за вилку</span><span class="kz">Бөлімдер бойынша KPI орындалуы, ЕТҚ жоспары мен фактісі, «бәріне 100%» және ауқымнан шығу белгілері</span></p></div>
+        <div class="fv"><span class="n">5</span><b><span class="ru">Корректировка</span><span class="kz">Түзету</span></b><p><span class="ru">Раз в квартал пересматриваем KPI и веса, фиксируем причины невыполнения</span><span class="kz">Тоқсанына бір рет KPI мен салмақтарды қайта қараймыз, орындалмау себептерін тіркейміз</span></p></div>
+      </div>
+      <div class="pf">
+        <div class="pfh"><span><span class="ru">Отдел продаж · выполнение KPI</span><span class="kz">Сату бөлімі · KPI орындалуы</span></span><span class="small"><span class="ru">условный пример</span><span class="kz">шартты мысал</span></span></div>
+        <div class="pfr hd"><span><span class="ru">Месяц</span><span class="kz">Ай</span></span><span><span class="ru">Цель</span><span class="kz">Мақсат</span></span><span><span class="ru">Факт</span><span class="kz">Факт</span></span><span></span></div>
+        <div class="pfr"><span><span class="ru">Сентябрь</span><span class="kz">Қыркүйек</span></span><span>85%</span><span>88%</span><span class="dot g"></span></div>
+        <div class="pfr"><span><span class="ru">Октябрь</span><span class="kz">Қазан</span></span><span>85%</span><span>72%</span><span class="dot r"></span></div>
+        <div class="pfr"><span><span class="ru">Ноябрь</span><span class="kz">Қараша</span></span><span>85%</span><span>91%</span><span class="dot g"></span></div>
+      </div>
+    </div>
+  </section>
+
 
   <section>
     <div class="wrap">
@@ -841,9 +898,9 @@ figcaption{font-size:13px;color:var(--muted)}
             <ul><li><span class="ru">На тестовых данных — без доступа к вашей базе</span><span class="kz">Тестілік деректермен — базаңызға қол жеткізусіз</span></li><li><span class="ru">Ничего не нужно устанавливать</span><span class="kz">Ештеңе орнатудың қажеті жоқ</span></li></ul>
           </div>
           <div class="t-cb">
-            <h2><span class="ru">Покажем C&amp;B-Контроль на ваших должностях за 20 минут</span><span class="kz">C&amp;B-Контрольді сіздің лауазымдарыңызда 20 минутта көрсетеміз</span></h2>
-            <p><span class="ru">На созвоне покажем грейды, KPI-карты и расчёт переменной части на примере ваших должностей, а также экран директора.</span><span class="kz">Қоңырауда сіздің лауазымдарыңыз мысалында грейдтерді, KPI-карталарды және өзгермелі бөлікті есептеуді, сондай-ақ директор экранын көрсетеміз.</span></p>
-            <ul><li><span class="ru">Только названия должностей — без ФИО и окладов</span><span class="kz">Тек лауазым атаулары — аты-жөнсіз және жалақысыз</span></li><li><span class="ru">Ваше Положение о премировании — если есть</span><span class="kz">Сыйақы туралы Ережеңіз — бар болса</span></li></ul>
+            <h2><span class="ru">Получите 3 KPI-карты бесплатно</span><span class="kz">3 KPI-картаны тегін алыңыз</span></h2>
+            <p><span class="ru">Пришлите 3 должностные инструкции — за 2 рабочих дня вернём готовые KPI-карты: показатели, веса, порог и источники данных. А на созвоне покажем, как они работают в C&amp;B-Контроле каждый месяц.</span><span class="kz">3 лауазымдық нұсқаулықты жіберіңіз — 2 жұмыс күні ішінде дайын KPI-карталарды қайтарамыз: көрсеткіштер, салмақтар, шек және дерек көздері. Ал қоңырауда олардың C&amp;B-Контрольде ай сайын қалай жұмыс істейтінін көрсетеміз.</span></p>
+            <ul><li><span class="ru">Только должностные инструкции — без ФИО и окладов</span><span class="kz">Тек лауазымдық нұсқаулықтар — аты-жөнсіз және жалақысыз</span></li><li><span class="ru">Бесплатно и без обязательств</span><span class="kz">Тегін және міндеттемесіз</span></li></ul>
           </div>
           <p class="small" style="color:inherit;opacity:.75;margin-top:18px"><span class="ru">Телефон и WhatsApp</span><span class="kz">Телефон және WhatsApp</span></p>
           <div class="phone" id="phone">+7 705 345 84 58</div>
@@ -855,7 +912,7 @@ figcaption{font-size:13px;color:var(--muted)}
           <label><span><span class="ru">Компания</span><span class="kz">Компания</span></span><input name="company" autocomplete="organization"></label>
           <div class="row2">
             <label><span><span class="ru">Сотрудников</span><span class="kz">Қызметкерлер</span></span><select name="size"><option>до 50</option><option selected>50–150</option><option>150–500</option><option>больше 500</option></select></label>
-            <label><span><span class="ru">Что интересует</span><span class="kz">Не қызықтырады</span></span><select name="what"><option value="КДП-Контроль: демо">КДП-Контроль</option><option value="C&amp;B-Контроль: показ на наших должностях">C&amp;B-Контроль</option><option value="оба модуля">Оба модуля</option></select></label>
+            <label><span><span class="ru">Что интересует</span><span class="kz">Не қызықтырады</span></span><select name="what"><option value="КДП-Контроль: демо">Демо КДП-Контроля</option><option value="C&amp;B-Контроль: 3 KPI-карты бесплатно">3 KPI-карты бесплатно (C&amp;B)</option><option value="оба модуля">Оба модуля</option></select></label>
           </div>
           <button type="submit" class="btn btn-main" style="margin-top:6px"><span class="ru">Отправить в WhatsApp</span><span class="kz">WhatsApp-қа жіберу</span></button>
           <p class="small" style="color:inherit;opacity:.7"><span class="ru">Откроется WhatsApp с готовым сообщением — останется нажать «Отправить».</span><span class="kz">Дайын хабарламасы бар WhatsApp ашылады — тек «Жіберу» түймесін басу қалады.</span></p>
@@ -960,7 +1017,7 @@ figcaption{font-size:13px;color:var(--muted)}
       <ul><li>Қызметкер әсер ете алмайтын көрсеткіш.</li><li>Мақсаттарды кейін өзгерту.</li><li>Басшы бәріне 100% қояды — жүйе мұны белгілеуі керек.</li></ul>
       <p class="hl">C&amp;B-Контрольде KPI-карта лауазымдық нұсқаулықтан конструкторда құрылады, ал қызметкер өз салмақтары мен болашақ сыйақысын телефонда көреді.</p>
     </div>
-    <div class="dlg-cta"><p><span class="ru">Покажем KPI-карты на ваших должностях</span><span class="kz">KPI-карталарды сіздің лауазымдарыңызда көрсетеміз</span></p><a class="btn btn-blue" href="#contact" data-close data-go="cb"><span class="ru">Обсудить C&amp;B-Контроль</span><span class="kz">C&amp;B-Контрольді талқылау</span></a></div>
+    <div class="dlg-cta"><p><span class="ru">Получите 3 KPI-карты для ваших должностей — бесплатно</span><span class="kz">Сіздің лауазымдарыңызға 3 KPI-картаны тегін алыңыз</span></p><a class="btn btn-blue" href="#contact" data-close data-go="cb"><span class="ru">Получить KPI-карты</span><span class="kz">KPI-карталарды алу</span></a></div>
   </div>
 </dialog>
 
