@@ -30,7 +30,8 @@
   --warn:#F2B866; --warn-soft:#33260F; --bad:#F2A0A4; --bad-soft:#3A1C1E; --ink:#E4EDEB; --on-ink:#0E1514; color-scheme:dark}
 body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:16px;line-height:1.55;margin:0}
 .site[data-lang="ru"] .kz,.site[data-lang="kz"] .ru{display:none}
-.wrap{max-width:1080px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.wrap{max-width:1320px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+@media (min-width:900px){.wrap{padding-left:40px;padding-right:40px}}
 a{color:var(--teal)}
 h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0;letter-spacing:-0.01em}
 h2{font-size:clamp(24px,3.4vw,34px);line-height:1.15}
@@ -38,7 +39,7 @@ h3{font-size:20px;line-height:1.25}
 p{margin:0}
 .eyebrow{font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
 section{padding-block:56px;border-top:1px solid var(--line)}
-.lead{font-size:18px;color:var(--muted);max-width:60ch;margin-top:16px}
+.lead{font-size:18px;color:var(--muted);max-width:78ch;margin-top:16px}
 .btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 22px;border-radius:12px;font:600 15px var(--body);text-decoration:none;border:0;cursor:pointer;text-align:center}
 .btn-main{background:var(--teal);color:#FFFFFF}
 .btn-blue{background:var(--blue);color:#FFFFFF}
@@ -70,7 +71,7 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .hero h1{font-size:clamp(30px,4vw,46px)!important}
 .hero h1 em{display:inline-block;margin-top:.12em}
 .hero h1 em{font-style:normal;color:var(--teal)}
-.hero .lead{max-width:54ch}
+.hero .lead{max-width:70ch}
 .word{display:inline-flex;gap:10px;align-items:baseline;margin-top:16px;font-size:14px;color:var(--muted)}
 .word b{font-family:var(--display);color:var(--fg);font-size:15px}
 .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
@@ -104,7 +105,7 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 
 /* risk compare */
 .band{background:var(--blue-soft);border-top:0}
-.band h2{max-width:26ch}
+.band h2{max-width:none}
 .compare{margin-top:28px;border-radius:16px;overflow:hidden;border:1px solid var(--line);background:var(--surface)}
 .crow{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);border-top:1px solid var(--line)}
 .crow:first-child{border-top:0}
@@ -159,6 +160,12 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .contact .txt p{opacity:.85;margin-top:12px}
 .contact ul{margin:14px 0 0;padding-left:18px;opacity:.9;font-size:15px}
 .form{display:flex;flex-direction:column;gap:12px}
+.form .consent{flex-direction:row;align-items:flex-start;gap:10px;font-size:13px;line-height:1.45;cursor:pointer}
+.form .consent input{min-height:0;width:18px;height:18px;margin:1px 0 0;flex:none;accent-color:var(--teal);padding:0}
+.form .consent a{color:inherit;text-decoration:underline}
+.form .consent-err{display:none;color:#FFB4B4;font-size:13px;margin:-4px 0 0}
+.form.need-consent .consent-err{display:block}
+footer a{color:inherit}
 .form label{display:flex;flex-direction:column;gap:6px;font-size:13px;opacity:.9}
 .form input,.form select{min-height:46px;border-radius:10px;border:1px solid rgba(255,255,255,.25);background:rgba(255,255,255,.08);color:inherit;padding:0 12px;font:15px var(--body)}
 :root[data-theme="dark"] .form input,:root[data-theme="dark"] .form select{border-color:rgba(0,0,0,.25);background:rgba(0,0,0,.06)}
@@ -199,7 +206,7 @@ dialog::backdrop{background:rgba(10,20,20,.55)}
 .prow span small{display:block;color:var(--muted);font-size:12px}
 .prow b{white-space:nowrap}
 .dlg-cta{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px 18px}
-.dlg-cta p{font-weight:600;max-width:56ch}
+.dlg-cta p{font-weight:600;max-width:72ch}
 .shots{display:grid;grid-template-columns:minmax(0,1fr) 170px;gap:16px;align-items:end}
 .shots figure,.fig{margin:0;display:flex;flex-direction:column;gap:8px}
 .shots img,.fig img{display:block;width:100%;height:auto;border-radius:12px;border:1px solid var(--line);background:#fff}
@@ -309,7 +316,7 @@ figcaption{font-size:13px;color:var(--muted)}
 .opt.kdp[aria-pressed="true"]{border-color:var(--teal)}
 .opt.cb[aria-pressed="true"]{border-color:var(--blue)}
 .choose .note{font-size:13px;color:var(--muted)}
-.byline{display:flex;gap:12px;align-items:center;margin-top:22px;font-size:14px;color:var(--muted);max-width:54ch}
+.byline{display:flex;gap:12px;align-items:center;margin-top:22px;font-size:14px;color:var(--muted);max-width:70ch}
 .byline .avatar{width:44px;height:44px;font-size:14px;flex:none}
 .byline b{color:var(--fg)}
 .trackhead{border-top:0;padding-block:44px 8px}
@@ -317,7 +324,7 @@ figcaption{font-size:13px;color:var(--muted)}
 .t-kdp .pill{background:var(--teal)} .t-cb .pill{background:var(--blue)}
 :root[data-theme="dark"] .trackhead .pill{color:#0E1514}
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .trackhead .pill{color:#0E1514}}
-.trackhead h2{margin-top:14px;max-width:24ch}
+.trackhead h2{margin-top:14px;max-width:none}
 .split{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:32px;align-items:start;margin-top:28px}
 .plist{margin:12px 0 0;padding:0;list-style:none;display:flex;flex-direction:column;gap:10px}
 .plist li{background:var(--surface);border:1px solid var(--line);border-left:3px solid var(--bad);border-radius:10px;padding:12px 14px;font-size:15px}
@@ -431,7 +438,7 @@ figcaption{font-size:13px;color:var(--muted)}
 .offer-sec{border-top:0;padding-block:8px 24px}
 .offer{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap;background:var(--blue);color:#fff;border-radius:20px;padding:26px 28px}
 .offer h2{color:#fff;margin:8px 0 8px}
-.offer p{max-width:62ch;opacity:.95}
+.offer p{max-width:80ch;opacity:.95}
 .offer .small{color:#fff;opacity:.8;margin-top:6px}
 .otag{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;background:rgba(255,255,255,.18);border-radius:999px;padding:4px 10px}
 .offer .btn.big{display:inline-flex!important;align-items:center;justify-content:center;flex:none;background:#fff;color:var(--blue)!important;min-height:54px;padding:0 26px;font-size:16px}
@@ -875,7 +882,7 @@ figcaption{font-size:13px;color:var(--muted)}
         <div>
           <h2 style="font-size:clamp(22px,2.8vw,28px)"><span class="ru">Камшат Алмагамбетова</span><span class="kz">Қамшат Алмағамбетова</span></h2>
           <p style="margin-top:6px;font-weight:600"><span class="ru">HR-практик: кадровое делопроизводство, оплата труда и C&amp;B</span><span class="kz">HR-практик: кадрлық іс жүргізу, еңбекақы және C&amp;B</span></p>
-          <p style="margin-top:10px;max-width:62ch;color:var(--muted)"><span class="ru">19 лет в HR нефтегазовых, горнодобывающих и производственных компаниях Казахстана. Вела полный цикл кадрового делопроизводства в нескольких юрлицах, руководила отделом оплаты труда, разрабатывала системы премирования и KPI, внедряла системы автоматизации HR. Сегодня помогает компаниям выстраивать системы оплаты труда и автоматизировать КДП.</span><span class="kz">Қазақстанның мұнай-газ, тау-кен және өндірістік компанияларында HR саласында 19 жыл. Бірнеше заңды тұлғада кадрлық іс жүргізудің толық циклін жүргізді, еңбекақы бөлімін басқарды, сыйақы және KPI жүйелерін әзірледі, HR-ды автоматтандыру жүйелерін енгізді. Бүгінде компанияларға еңбекақы жүйелерін құруға және КІЖ-ді автоматтандыруға көмектеседі.</span></p>
+          <p style="margin-top:10px;max-width:80ch;color:var(--muted)"><span class="ru">19 лет в HR нефтегазовых, горнодобывающих и производственных компаниях Казахстана. Вела полный цикл кадрового делопроизводства в нескольких юрлицах, руководила отделом оплаты труда, разрабатывала системы премирования и KPI, внедряла системы автоматизации HR. Сегодня помогает компаниям выстраивать системы оплаты труда и автоматизировать КДП.</span><span class="kz">Қазақстанның мұнай-газ, тау-кен және өндірістік компанияларында HR саласында 19 жыл. Бірнеше заңды тұлғада кадрлық іс жүргізудің толық циклін жүргізді, еңбекақы бөлімін басқарды, сыйақы және KPI жүйелерін әзірледі, HR-ды автоматтандыру жүйелерін енгізді. Бүгінде компанияларға еңбекақы жүйелерін құруға және КІЖ-ді автоматтандыруға көмектеседі.</span></p>
           <div class="facts">
             <span><span class="ru">внедрение HR-систем</span><span class="kz">HR жүйелерін енгізу</span></span><span><span class="ru">19 лет в HR</span><span class="kz">HR-да 19 жыл</span></span><span><span class="ru">оплата труда и C&amp;B</span><span class="kz">еңбекақы және C&amp;B</span></span><span><span class="ru">КДП на вахте</span><span class="kz">вахтадағы КІЖ</span></span><span><span class="ru">1С:ЗУП, включая настройку</span><span class="kz">1С:ЗУП, баптауды қоса</span></span>
           </div>
@@ -914,6 +921,8 @@ figcaption{font-size:13px;color:var(--muted)}
             <label><span><span class="ru">Сотрудников</span><span class="kz">Қызметкерлер</span></span><select name="size"><option>до 50</option><option selected>50–150</option><option>150–500</option><option>больше 500</option></select></label>
             <label><span><span class="ru">Что интересует</span><span class="kz">Не қызықтырады</span></span><select name="what"><option value="КДП-Контроль: демо">Демо КДП-Контроля</option><option value="C&amp;B-Контроль: 3 KPI-карты бесплатно">3 KPI-карты бесплатно (C&amp;B)</option><option value="оба модуля">Оба модуля</option></select></label>
           </div>
+          <label class="consent"><input type="checkbox" name="consent" id="consent"><span><span class="ru">Согласен(на) на обработку персональных данных в соответствии с <a href="privacy.html" target="_blank">политикой конфиденциальности</a></span><span class="kz"><a href="privacy.html" target="_blank">Құпиялылық саясатына</a> сәйкес дербес деректерімнің өңделуіне келісемін</span></span></label>
+          <p class="consent-err"><span class="ru">Отметьте согласие, чтобы отправить заявку</span><span class="kz">Өтінім жіберу үшін келісімді белгілеңіз</span></p>
           <button type="submit" class="btn btn-main" style="margin-top:6px"><span class="ru">Отправить в WhatsApp</span><span class="kz">WhatsApp-қа жіберу</span></button>
           <p class="small" style="color:inherit;opacity:.7"><span class="ru">Откроется WhatsApp с готовым сообщением — останется нажать «Отправить».</span><span class="kz">Дайын хабарламасы бар WhatsApp ашылады — тек «Жіберу» түймесін басу қалады.</span></p>
         </form>
@@ -923,8 +932,8 @@ figcaption{font-size:13px;color:var(--muted)}
 </main>
 
 <footer class="wrap">
-  <span>Tártip HR · <span class="ru">ИП Алмагамбетова К. · БИН 800530400759</span><span class="kz">ЖК Алмағамбетова Қ. · БСН 800530400759</span></span>
-  <span>КДП-Контроль · C&amp;B-Контроль</span>
+  <span>Tártip HR · <span class="ru">ИП Алмагамбетова К. · ИИН/БИН 800530400759 · г. Астана, ул. Калдаякова, 11 · +7 705 345 84 58</span><span class="kz">ЖК Алмағамбетова Қ. · ЖСН/БСН 800530400759 · Астана қ., Қалдаяқов к-сі, 11 · +7 705 345 84 58</span></span>
+  <span><a href="privacy.html"><span class="ru">Политика конфиденциальности</span><span class="kz">Құпиялылық саясаты</span></a> · КДП-Контроль · C&amp;B-Контроль</span>
 </footer>
 
 <dialog id="art-grade" aria-labelledby="t-ag">
@@ -1150,9 +1159,12 @@ figcaption{font-size:13px;color:var(--muted)}
   if(h==='kdp'||h==='cb') setTrack(h, true);
 
   var form=document.getElementById('lead');
+  document.getElementById('consent').addEventListener('change',function(){ if(this.checked) form.classList.remove('need-consent'); });
   form.addEventListener('submit',function(e){
     e.preventDefault();
     var f=form.elements;
+    if(!f.consent.checked){ form.classList.add('need-consent'); f.consent.focus(); return; }
+    form.classList.remove('need-consent');
     var name=f.name.value.trim(), company=f.company.value.trim(), size=f.size.value, what=f.what.value;
     var msg = lang==='kz'
       ? 'Сәлеметсіз бе! ' + (name? 'Менің атым ' + name + '. ' : '') + (company? 'Компания: ' + company + '. ' : '') + 'Қызметкерлер: ' + size + '. Қызықтырады: ' + what + '.'
